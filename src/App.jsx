@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import supabase from '../config/supabaseClient'
 import './App.css'
 import ProjectCard from "./components/ProjectCard";
+import Create from "./components/Create";
 
 function App() {
   const [fetchError, setFetcherror] = useState(null);
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <>
+      <Create />
       {fetchError && (<p>{fetchError}</p>)}
       {projects && (
         <ul className="hello">
